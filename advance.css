@@ -35,7 +35,7 @@ html, body {
 }
 
 .warp {
-    min-height: 100%;
+    height: 100%;
 }
 
 header {
@@ -47,7 +47,9 @@ header {
 .container {
     width: 100%;
     display: table;
-
+    height: 100%;
+    margin: -55px 0; 
+    padding: 55px 0;
 }
 
 .aside_left {
@@ -67,7 +69,7 @@ header {
 .aside_area {
     overflow-y: auto;  
     position: absolute;
-    top: 53px;
+    top: 54px;
     left: 0; 
     bottom: 56px;
     width: 250px;
