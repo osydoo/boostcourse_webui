@@ -26,10 +26,13 @@ img {
     vertical-align: top;
 }
 
-.top_head, .tab_head{
+.blind {
     position: absolute;
-    z-index: -1;
-    color: transparent;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    margin: -1px;
+    clip: rect(0, 0, 0, 0);
 }
 
 .tab:after {
@@ -48,10 +51,9 @@ img {
     font-size: 24px;
     color: #885655;
     background-color: #753b3a;
-    border-left: 1px solid #e4e4e4;
-    border-right: 1px solid #e4e4e4;
-    border-top: 0;
-    border-bottom: 0;
+    border-width: 0px 1px;
+    border-color: #e4e4e4;
+    border-style: solid;
     outline: 0;
     cursor: pointer;
     padding: 0;
@@ -76,7 +78,7 @@ img {
 .tab_panel_wrap {
     width: 907px;
     display: none;
-    height: 419px;
+    height: 349px;
     outline: 0;
 }
 
@@ -84,15 +86,13 @@ img {
     display: block;
     padding: 35px;
     border: 1px solid #e4e4e4;
-    background-image: url("./bg_tab_ui.png");
-    background-repeat: no-repeat;
-    background-position: 100% 100%;
+    background: 100% 100% no-repeat url("./bg_tab_ui.png");
 }
 
 
-.tab_panel_wrap h3 {
+.tab_panel_wrap h2 {
     font-size: 40px;
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
 .meet_title {
@@ -107,12 +107,11 @@ img {
 }
 
 .meet_sub > li{
-    margin: 10px 0;
+    margin: 10px 0 0;
 }
 
 .prepare_title {
     display: inline-block;
-    vertical-align: top;
 }
 
 .prepare_content {
@@ -126,7 +125,7 @@ img {
 .submit {
     margin-top: 20px;
     padding: 15px 35px;
-    border: 1px bolid #000;
+    border: 1px solid #000;
     font-weight: bold;
     font-size: 24px;
     background-color: #fff;
