@@ -1,0 +1,237 @@
+@charset "UTF-8";
+
+body, h1, h2, h3, h4, h5, h6, ul, ol, dl, dd, p {
+	margin: 0;
+	padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+ul, ol {
+	list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    vertical-align: top;
+}
+
+.blind {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    margin: -1px;
+    clip: rect(0, 0, 0, 0);
+}
+
+.calender_yyyymm {
+    text-align: center;
+}
+
+.calender_yyyymm::after {
+    clear: both;
+    content: '';
+    display: block;
+}
+
+.move_month_back {
+    background-color: #fff;
+    border: 2px solid #eee;
+    height: 30px;
+    width: 30px;
+    float: left;
+}
+
+.move_month_front {
+    background-color: #fff;
+    border: 2px solid #eee;
+    height: 30px;
+    width: 30px;
+    float: right;
+}
+
+.sprit_img {
+    display: block;
+    overflow: hidden;
+    background-image: url('sp_table2.png');
+    background-repeat: no-repeat;
+    background-size: 40px 35px;
+}
+
+.back {
+    height: 13px;
+    width: 7px;
+    background-position : 0 0;
+    margin: auto;
+}
+
+.front{
+    height: 13px;
+    width: 7px;
+    background-position : -15px -21px;
+    margin: auto;
+}
+
+.yymm{
+    font-size: 25px;
+}
+
+
+.calender_todo {
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    margin-top: 30px;
+}
+
+.calender_todo thead tr th {
+    border-top: 2px solid #eee;
+    padding: 5px;
+    color: #bbb;
+}
+
+.calender_todo tbody tr td {
+    border-top: 1px solid #eee;
+    text-align: center;
+    font-weight: bold;
+}
+
+.calender_todo tbody tr{
+    border-width: 0px;
+}
+
+.inner {
+	position: relative;
+	height: 30px;
+	padding: 10px;
+}
+
+.attend {
+    font-size: 15px;
+    color: #91add2;
+    border-radius: 100px;
+}
+
+.date.today {
+	color: #f44e4e;
+}
+
+.attend.today {
+    font-size: 20px;
+	color: #f44e4e;
+}
+
+.calender_quiz {
+    position: absolute;
+    top: 5px;
+    left: -1px;
+    right: -1px;
+    bottom: 20px;
+    background-color: #faf1f2;
+    z-index: -1;
+}
+
+.calender_quiz.first {
+    position: absolute;
+    left: 20px;
+    right: -1px;
+    bottom: 20px;
+    background-color: #faf1f2;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.calender_quiz.last {
+    position: absolute;
+    left: -1px;
+    right: 20px;
+    bottom: 20px;
+    background-color: #faf1f2;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.quize_alt {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.calender_todoquiz {
+    position: absolute;
+    top: 5px;
+    left: -1px;
+    right: -1px;
+    bottom: 20px;
+    background-color: #f0f4f6;
+    z-index: -1;
+}
+
+.calender_todoquiz.first {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    background-color: #f0f4f6;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.calender_todoquiz.last {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background-color: #f0f4f6;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.clear_batch_text {
+    position: absolute;
+    top: -15px;
+    left: 56px;
+    font-size: 10px;
+    display: block;
+    width: 40px; 
+    line-height: 15px;
+    background-color: #ff7b79;
+    color: #fff;
+    
+}
+
+.clear_tag { 
+    position: absolute;
+    top: 0;
+    left: 73px;
+    display: block;
+    width: 7px; 
+    height: 5px;
+    background-position : -30px 0;
+}
+
+.calender_todoquiz_dot {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: #f0f4f6;
+    border-radius: 25px;
+    vertical-align: middle;
+}
+
+.sign_intro {
+    margin: 20px 0 0 20px;
+    color: #aaa;
+}
+
+.attend_dot_intro{
+    margin-right: 20px;
+}
