@@ -28,7 +28,6 @@ img {
     border: 2px solid #eee;
     height: 30px;
     width: 30px;
-    float: left;
     cursor: pointer;
 }
 
@@ -102,10 +101,10 @@ img {
 
 .attend {
     background-color: #91add2;
-    border-radius: 100px;
+    border-radius: 50%;
     height: 5px;
     width: 5px;
-    margin: 10px auto;
+    margin: 5px auto 0;
 }
 
 .date.today {
@@ -143,12 +142,6 @@ img {
 
 }
 
-.quize_alt {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
 .clear_batch_text {
     position: absolute;
     top: -15px;
@@ -163,7 +156,6 @@ img {
 }
 
 .clear_batch_text::before {
-    overflow: hidden;
     content: '';
     background: url('sp_table2.png') no-repeat;
     background-size: 40px 35px;
@@ -185,24 +177,33 @@ img {
 }
 
 .sign_intro {
-    margin: 20px 0 0 20px;
+    margin-top: 20px;
     color: #aaa;
     position: relative;
 }
 
-.attend_dot_intro{
-    margin: 0px 20px;
+.dimmed {
+    color: #eee;
 }
+
+.attend_dot_intro{
+    margin-left: 20px;
+}
+
 
 .attend_dot_intro::before{
     content: '';
     background-color: #91add2;
-    border-radius: 100px;
+    border-radius: 50%;
     height: 5px;
     width: 5px;
     position: absolute;
     top: 5px;
     left: 10px;
+}
+
+.calender_quiz_dict {
+    margin-left: 20px;
 }
 
 .calender_quiz_dict::before {
