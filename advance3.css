@@ -1,27 +1,5 @@
 @charset "UTF-8";
 
-body, h1, h2, h3, h4, h5, h6, ul, ol, dl, dd, p {
-	margin: 0;
-	padding: 0;
-}
-
-table {
-    border-collapse: collapse;
-}
-
-ul, ol {
-	list-style: none;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
 img {
     vertical-align: top;
 }
@@ -45,27 +23,27 @@ img {
     display: block;
 }
 
-.move_month_back {
+.move_month {
     background-color: #fff;
     border: 2px solid #eee;
     height: 30px;
     width: 30px;
     float: left;
+    cursor: pointer;
 }
 
-.move_month_front {
-    background-color: #fff;
-    border: 2px solid #eee;
-    height: 30px;
-    width: 30px;
+.move_month.move_front {
     float: right;
+}
+
+.move_month.move_back {
+    float: left;
 }
 
 .sprit_img {
     display: block;
     overflow: hidden;
-    background-image: url('sp_table2.png');
-    background-repeat: no-repeat;
+    background: url('sp_table2.png') no-repeat;
     background-size: 40px 35px;
 }
 
@@ -76,12 +54,22 @@ img {
     margin: auto;
 }
 
-.front{
+.front {
     height: 13px;
     width: 7px;
-    background-position : -15px -21px;
+    background-position : -15px 0px;
+    /* // -21px; */
     margin: auto;
 }
+
+.front.disabled {
+    background-position-y: -21px;
+}
+
+.back.disabled {
+    background-position-y: -21px;
+}
+
 
 .yymm{
     font-size: 25px;
@@ -106,10 +94,6 @@ img {
     font-weight: bold;
 }
 
-.calender_todo tbody tr{
-    border-width: 0px;
-}
-
 .inner {
 	position: relative;
 	height: 30px;
@@ -117,9 +101,11 @@ img {
 }
 
 .attend {
-    font-size: 15px;
-    color: #91add2;
+    background-color: #91add2;
     border-radius: 100px;
+    height: 5px;
+    width: 5px;
+    margin: 10px auto;
 }
 
 .date.today {
@@ -127,38 +113,34 @@ img {
 }
 
 .attend.today {
-    font-size: 20px;
-	color: #f44e4e;
+	background-color: #f44e4e;
 }
 
 .calender_quiz {
+    background-color: #faf1f2;
     position: absolute;
     top: 5px;
     left: -1px;
     right: -1px;
     bottom: 20px;
-    background-color: #faf1f2;
     z-index: -1;
 }
 
 .calender_quiz.first {
-    position: absolute;
     left: 20px;
-    right: -1px;
-    bottom: 20px;
-    background-color: #faf1f2;
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
 }
 
 .calender_quiz.last {
-    position: absolute;
-    left: -1px;
     right: 20px;
-    bottom: 20px;
-    background-color: #faf1f2;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
+}
+
+.calender_quiz.todo {
+    background-color: #f0f4f6;
+
 }
 
 .quize_alt {
@@ -167,52 +149,27 @@ img {
     left: 0;
 }
 
-.calender_todoquiz {
-    position: absolute;
-    top: 5px;
-    left: -1px;
-    right: -1px;
-    bottom: 20px;
-    background-color: #f0f4f6;
-    z-index: -1;
-}
-
-.calender_todoquiz.first {
-    position: absolute;
-    left: 20px;
-    bottom: 20px;
-    background-color: #f0f4f6;
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
-}
-
-.calender_todoquiz.last {
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
-    background-color: #f0f4f6;
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
-}
-
 .clear_batch_text {
     position: absolute;
     top: -15px;
-    left: 56px;
+    left: 50%;
     font-size: 10px;
     display: block;
     width: 40px; 
+    margin-left: -20px;
     line-height: 15px;
     background-color: #ff7b79;
     color: #fff;
-    
 }
 
-.clear_tag { 
+.clear_batch_text::before {
+    overflow: hidden;
+    content: '';
+    background: url('sp_table2.png') no-repeat;
+    background-size: 40px 35px;
     position: absolute;
-    top: 0;
-    left: 73px;
-    display: block;
+    top: 15px;
+    left: 17px;
     width: 7px; 
     height: 5px;
     background-position : -30px 0;
@@ -230,8 +187,30 @@ img {
 .sign_intro {
     margin: 20px 0 0 20px;
     color: #aaa;
+    position: relative;
 }
 
 .attend_dot_intro{
-    margin-right: 20px;
+    margin: 0px 20px;
+}
+
+.attend_dot_intro::before{
+    content: '';
+    background-color: #91add2;
+    border-radius: 100px;
+    height: 5px;
+    width: 5px;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+}
+
+.calender_quiz_dict::before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    background-color: #f0f4f6;
+    border-radius: 25px;
+    position: absolute; 
+    left: 56px;
 }

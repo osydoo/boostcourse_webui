@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./advance3.css">
+    <link rel="stylesheet" href="./reset.css">
     <title>
         TODO 달력만들기
     </title>
@@ -11,15 +12,24 @@
 
 <body>
     <div class="wrap">
-        <header>
-            <h1 class="blind">TODO 달력</h1>
-        </header>
         <div class="calender_yyyymm">
-            <button class="move_month_back"><span class="sprit_img back"><span class="blind">이전달
-                        달력</span></span></button>
             <strong class="yymm">2017년 4월</strong>
-            <button disabled class="move_month_front"><span class="sprit_img front"><span class="blind">다음달
-                        달력</span></span></button>
+            <button class="move_month move_back ">
+                <span class="sprit_img back">
+                    <!-- disabled 추가시 불가 버튼이미지 변경 -->
+                    <span class="blind">
+                        이전달 달력
+                    </span>
+                </span>
+            </button>
+            <button disabled class="move_month move_front ">
+                <span class="sprit_img front disabled">
+                    <!-- disabled 추가시 불가 버튼이미지 변경 -->
+                    <span class="blind">
+                        다음달 달력
+                    </span>
+                </span>
+            </button>
         </div>
         <table class="calender_todo">
             <caption class="blind">달력</caption>
@@ -40,7 +50,6 @@
                         <div class="inner">
                             <span class="date"></span>
                         </div>
-                        <div class="clear_line"></div>
                     </td>
                     <td>
                         <div class="inner">
@@ -54,7 +63,7 @@
                     </td>
                     <td>
                         <div class="inner">
-                            <span class="date holiday"></span>
+                            <span class="date"></span>
                         </div>
                     </td>
                     <td>
@@ -76,116 +85,127 @@
                 <tr>
                     <td>
                         <div class="inner">
-                            <div class="calender_quiz first">
-                                <p class="blind quizestart">이전 퀴즈 시작일</p>
-                            </div>
                             <span class="date">3</span>
-                            <div class="attend">&bull;</div>
+                            <div class="calender_quiz first">
+                                <!-- 퀴즈의 시작일은 first, 끝나는날은 last, 할 예정은 todo를 추가 부탁드립니다. -->
+                                <span class="blind quizestart">이전 퀴즈 시작일</span>
+                            </div>
+                            <div class="attend"><span class="blind">출석</span></div>
                         </div>
                     </td>
                     <td>
                         <div class="inner">
-                            <div class="calender_quiz"></div>
                             <span class="date">4</span>
-                            <div class="attend">&bull;</div>
+                            <div class="calender_quiz">
+                                <span class="blind">퀴즈</span>
+                            </div>
+                            <div class="attend"><span class="blind">출석</span></div>
                         </div>
                     </td>
                     <td>
                         <div class="inner">
-                            <div class="calender_quiz"></div>
                             <span class="date">5</span>
-                            <div class="attend">&bull;</div>
+                            <div class="calender_quiz">
+                                <span class="blind">퀴즈</span>
+                            </div>
+                            <div class="attend"><span class="blind">출석</span></div>
                         </div>
                     </td>
-                    <td class="today">
+                    <td>
                         <div class="inner">
-                            <div class="calender_quiz"></div>
                             <span class="date">6</span>
-                            <div class="attend">&bull;</div>
+                            <div class="calender_quiz">
+                                <span class="blind">퀴즈</span>
+                            </div>
+                            <div class="attend"><span class="blind">출석</span></div>
                         </div>
                     </td>
                     <td>
                         <div class="inner">
-                            <div class="calender_quiz"></div>
                             <span class="date">7</span>
-                            <div class="attend">&bull;</div>
+                            <div class="calender_quiz">
+                                <span class="blind">퀴즈</span>
+                            </div>
+                            <div class="attend"><span class="blind">출석</span></div>
                         </div>
                     </td>
                     <td>
                         <div class="inner">
-                            <div class="calender_quiz"></div>
                             <span class="date">8</span>
-                            <div class="attend">&bull;</div>
+                            <div class="calender_quiz">
+                                <span class="blind">퀴즈</span>
+                            </div>
+                            <div class="attend"><span class="blind">출석</span></div>
                         </div>
                     </td>
                     <td>
                         <div class="inner">
+                            <span class="date">9</span>
                             <div class="calender_quiz last">
-                                <p class="blind quize_alt">이전 퀴즈 종료일</p>
+                                <span class="blind quize_alt">이전 퀴즈 종료일</span>
                             </div>
                             <div class="clear_batch_text">CLEAR</div>
                             <div class="sprit_img clear_tag">
                             </div>
-                            <span class="date">9</span>
-                            <div class="attend">&bull;</div>
+                            <div class="attend"><span class="blind">출석</span></div>
                         </div>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <div class="inner">
-                            <div class="calender_todoquiz first">
-                                <p class="blind quize_alt">할 퀴즈 시작일</p>
-                            </div>
                             <span class="date">10</span>
-                            <div class="attend">&bull;</div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="inner">
-                            <div class="calender_todoquiz"></div>
-                            <span class="date">11</span>
-                            <div class="attend">&bull;</div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="inner">
-                            <div class="calender_todoquiz"></div>
-                            <span class="date">12</span>
-                            <div class="attend">&bull;</div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="inner">
-                            <div class="calender_todoquiz last">
-                                <p class="blind quize_alt">할 퀴즈 종료일</p>
+                            <div class="calender_quiz todo first">
+                                <span class="blind quize_alt">할 퀴즈 시작일</span>
                             </div>
+                            <div class="attend"><span class="blind">출석</span></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="inner">
+                            <span class="date">11</span>
+                            <div class="calender_quiz todo"></div>
+                            <div class="attend"><span class="blind">출석</span></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="inner">
+                            <span class="date">12</span>
+                            <div class="calender_quiz todo"></div>
+                            <div class="attend"><span class="blind">출석</span></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="inner">
                             <span class="date">13</span>
-                            <div class="attend">&bull;</div>
+                            <div class="calender_quiz todo last">
+                                <span class="blind quize_alt">할 퀴즈 종료일</span>
+                            </div>
+                            <div class="attend"><span class="blind">출석</span></div>
                         </div>
                     </td>
                     <td>
                         <div class="inner">
                             <span class="date">14</span>
-                            <div class="attend">&bull;</div>
+                            <div class="attend"><span class="blind">출석</span></div>
                         </div>
                     </td>
                     <td>
                         <div class="inner">
-                            <div class="calender_todoquiz first">
-                                <p class="blind quize_alt">할 퀴즈 시작일</p>
-                            </div>
                             <span class="date">15</span>
-                            <div class="attend">&bull;</div>
+                            <div class="calender_quiz todo first">
+                                <span class="blind quize_alt">할 퀴즈 시작일</span>
+                            </div>
+                            <div class="attend"><span class="blind">출석</span></div>
                         </div>
                     </td>
                     <td>
                         <div class="inner">
-                            <div class="calender_todoquiz last">
-                                <p class="blind quize_alt">할 퀴즈 종료일</p>
-                            </div>
                             <span class="date">16</span>
-                            <div class="attend">&bull;</div>
+                            <div class="calender_quiz todo last">
+                                <span class="blind quize_alt">할 퀴즈 종료일</span>
+                            </div>
+                            <div class="attend"><span class="blind">출석</span></div>
                         </div>
                     </td>
                 </tr>
@@ -217,11 +237,11 @@
                     </td>
                     <td>
                         <div class="inner">
-                            <div class="calender_todoquiz first last">
-                                <p class="blind quize_alt">오늘</p>
-                            </div>
                             <span class="date">22</span>
-                            <div class="attend">&bull;</div>
+                            <div class="calender_quiz todo first last">
+                                <span class="blind quize_alt">오늘</span>
+                            </div>
+                            <div class="attend today"><span class="blind">출석</span></div>
                         </div>
                     </td>
                     <td>
@@ -244,7 +264,7 @@
                     <td>
                         <div class="inner">
                             <span class="date today">26</span>
-                            <div class="attend today">&bull;</div>
+                            <div class="attend today"><span class="blind">출석</span></div>
                         </div>
                     </td>
                     <td>
@@ -271,8 +291,8 @@
             </tbody>
         </table>
         <div class="sign_intro">
-            <span class="attend">&bull;</span><span class="attend_dot_intro"> 출석</span>
-            <span class="calender_todoquiz_dot"></span><span> 퀴즈</span>
+            <span class="attend_dot_intro">출석</span>
+            <span class="calender_quiz_dict"> 퀴즈</span>
         </div>
     </div>
 </body>
