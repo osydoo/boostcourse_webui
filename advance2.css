@@ -54,7 +54,6 @@ img {
     border-width: 0px 1px;
     border-color: #e4e4e4;
     border-style: solid;
-    outline: 0;
     cursor: pointer;
     padding: 0;
 }
@@ -97,7 +96,6 @@ img {
 
 .meet_title {
     font-size: 20px;
-    font-weight: bold;
     color: #777;
     margin-top: 10px;
 }
