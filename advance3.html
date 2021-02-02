@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./advance3.css">
     <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./advance3.css">
     <title>
         TODO 달력만들기
     </title>
@@ -14,20 +14,16 @@
     <div class="wrap">
         <div class="calender_yyyymm">
             <strong class="yymm">2017년 4월</strong>
+            <!-- [D] disabled 추가시 불가 버튼이미지 변경 -->
             <button class="move_month move_back ">
-                <!-- [D] disabled 추가시 불가 버튼이미지 변경 -->
-                <span class="sprit_img back">
-                    <span class="blind">
-                        이전달 달력
-                    </span>
+                <span class="blind">
+                    이전달 달력
                 </span>
             </button>
-            <button disabled class="move_month move_front ">
-                <!-- [D] disabled 추가시 불가 버튼이미지 변경 -->
-                <span class="sprit_img front disabled">
-                    <span class="blind">
-                        다음달 달력
-                    </span>
+            <!-- [D] disabled 추가시 불가 버튼이미지 변경 -->
+            <button disabled class="move_month move_front disabled">
+                <span class="blind">
+                    다음달 달력
                 </span>
             </button>
         </div>
@@ -142,11 +138,9 @@
                         <div class="inner">
                             <span class="date">9</span>
                             <div class="calender_quiz last">
-                                <span class="blind quize_alt">이전 퀴즈 종료일</span>
+                                <span class="blind">이전 퀴즈 종료일</span>
                             </div>
                             <div class="clear_batch_text">CLEAR</div>
-                            <div class="sprit_img clear_tag">
-                            </div>
                             <div class="attend"><span class="blind">출석</span></div>
                         </div>
                     </td>
@@ -238,7 +232,7 @@
                     <td>
                         <div class="inner">
                             <span class="date">22</span>
-                            <div class="calender_quiz todo first last">
+                            <div class="calender_quiz todo oneday">
                                 <span class="blind">퀴즈 시작과 종료</span>
                             </div>
                             <div class="attend"><span class="blind">출석</span></div>

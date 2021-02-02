@@ -24,48 +24,32 @@ img {
 }
 
 .move_month {
+    display: block;
+    overflow: hidden;
+    background: url('sp_table2.png') no-repeat ;
+    background-size: 40px 35px;
     background-color: #fff;
     border: 2px solid #eee;
-    height: 30px;
-    width: 30px;
+    height: 20px;
+    width: 20px;
     cursor: pointer;
 }
 
 .move_month.move_front {
+    background-position : -12px 0;
     float: right;
 }
 
 .move_month.move_back {
+    background-position : 4px 0;
     float: left;
 }
 
-.sprit_img {
-    display: block;
-    overflow: hidden;
-    background: url('sp_table2.png') no-repeat;
-    background-size: 40px 35px;
-}
-
-.back {
-    height: 13px;
-    width: 7px;
-    background-position : 0 0;
-    margin: auto;
-}
-
-.front {
-    height: 13px;
-    width: 7px;
-    background-position : -15px 0px;
-    /* // -21px; */
-    margin: auto;
-}
-
-.front.disabled {
+.move_front .disabled {
     background-position-y: -21px;
 }
 
-.back.disabled {
+.move_back .disabled {
     background-position-y: -21px;
 }
 
@@ -127,19 +111,23 @@ img {
 
 .calender_quiz.first {
     left: 20px;
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
+    border-radius: 25px 0 0 25px;
 }
 
 .calender_quiz.last {
     right: 20px;
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
+    border-radius: 0 25px 25px 0;
 }
+
+.calender_quiz.oneday {
+    right: 20px;
+    left: 20px;
+    border-radius: 25px;
+}
+
 
 .calender_quiz.todo {
     background-color: #f0f4f6;
-
 }
 
 .clear_batch_text {
