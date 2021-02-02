@@ -15,17 +15,13 @@ img {
 
 .form {
     background-color : #F8F9FD;
-    padding: 15px;
+    padding: 15px 15px 0px;
 }
 
 .list_seller {
     display: table;
     border-bottom: 1px solid #eee;
     padding: 15px 0;
-}
-
-.list_seller:first-child {
-    padding-top: 0;
 }
 
 .list_head {
@@ -36,7 +32,7 @@ img {
     display: table-cell;
 }
 
-.default_check[type='radio'] {
+.default_check {
     position: absolute;
     overflow:hidden;
     width: 1px;
@@ -45,7 +41,7 @@ img {
     opacity: 0;
 }
 
-.default_check[type='radio'] + label {
+.default_check + label {
     display: inline-block;
     font-size: 16px;
     color: #838586
@@ -66,20 +62,6 @@ img {
     background-image: url(ico_radio_on.png);
 }
 
-.default_check[type='checkbox'] {
-    position: absolute;
-    overflow:hidden;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    opacity: 0;
-}
-
-.default_check[type='checkbox'] + label {
-    display: inline-block;
-    font-size: 16px;
-    color: #838586
-}
 .default_check[type='checkbox'] + label:before {
     display: inline-block;
     width: 20px;
@@ -171,12 +153,11 @@ img {
     -moz-appearance: none;
     -webkit-appearance: none;
     font-size: 16px;
-    color: #838586
+    color: #838586;
 }
 
 .custom_select select option{
     display: none;
-    
 }
 
 .custom_select::after {
@@ -201,27 +182,35 @@ img {
     content: '';
 }
 
+.custom_select select:focus {
+    border: 1px solid #ddd;
+
+}
+
 .custom_select ul{
     display: none;
-    width: 198px;
-    position: absolute;
-    border: 1px solid #eee;
 }
 
 .custom_select select:focus + ul{
     display: list-item;
+    width: 194px;
+    position: absolute;
+    top: 38px;
+    left: 0;
+    border: 2px solid #838586;
 }
 
-.custom_select ul li{
-    width: 188px;
+.custom_select ul li button{
+    width: 100%;
     line-height: 40px;
     background-color: #fff;
     padding-left: 10px;
     font-size: 16px;
-    color: #838586
+    color: #838586;
+    border: 0;
 }
 
-.custom_select ul li:hover{
+.custom_select ul li button:hover{
     background-color: #f4f7fc;
     color: #97deb1;
     cursor: pointer;
@@ -243,11 +232,13 @@ img {
 .custom_select.small ul li{
     width: 108px;
 }
+
 .period_layout_box {
     display: inline-block;
     vertical-align: top;
     margin-left: 20px;
 }
+
 .period_box {
     display: table;
     table-layout: fixed;
@@ -264,26 +255,30 @@ img {
 }
 
 .button_check[type='radio'] + label {
+    display: inline-block;
     width: 60px;
     height: 40px;
     font-size: 16px;
     line-height: 40px;
-    display: inline-block;
     border: 1px solid #eee;
     background-color: #fff;
-    content:'';
     text-align: center;
     font-size: 16px;
     color: #838586
 }
 
-.period_box + .button_check[type='radio'] + label {
+.button_check[type='radio'] + label + .button_check[type='radio'] + label {
     margin-left: -1px;
 }
 
 .button_check[type='radio']:checked + label {
+    position: relative;
     border: 1px solid #97deb1;
     color: #97deb1;
+}
+
+.calender_box {
+    display: inline-block;
 }
 
 .calender_select {
@@ -293,10 +288,11 @@ img {
     border: 1px solid #eee;
 }
 
-.calender_select_label {
+.calender_select_day {
     display: inline-block;
-    width: 38px;
-    height: 38px;
+    position: relative;
+    width: 40px;
+    height: 40px;
     background: url(btn_calendar.png) no-repeat 50% 50%;
     background-size: 20px;
     vertical-align: top;
