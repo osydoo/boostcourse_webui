@@ -1,31 +1,5 @@
 @charset "UTF-8";
 
-body, h1, h2, h3, h4, h5, h6, ul, ol, dl, dd, p {
-	margin: 0;
-	padding: 0;
-}
-
-table {
-    border-collapse: collapse;
-}
-
-ul, ol {
-	list-style: none;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-img {
-    vertical-align: top;
-}
-
 .blind {
     position: absolute;
     width: 1px;
