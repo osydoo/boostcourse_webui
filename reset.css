@@ -2,7 +2,7 @@
 
 body, h1, h2, h3, h4, h5, h6, ul, ol, dl, dd, p {
 	margin: 0;
-	padding: 0;
+    padding: 0;
 }
 
 table {
@@ -21,7 +21,6 @@ a {
 a:hover {
     text-decoration: underline;
 }
-
 
 img {
     vertical-align: top;
