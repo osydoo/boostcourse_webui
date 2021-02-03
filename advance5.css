@@ -9,7 +9,7 @@
         clip: rect(0, 0, 0, 0);
     }
 
-    .header_img {
+    .header_img_box {
         position: relative;
     }
 
@@ -17,8 +17,6 @@
         position: absolute;
         top: 15px;
         left: 15px;
-        display: block;
-        overflow: hidden;
         background: url('htmlcss_advance_sprite.png') no-repeat ;
         background-size: 140px 140px;
         border: 0;
@@ -26,11 +24,9 @@
         width: 18px;
         cursor: pointer;
         background-position : 0 0;
-        z-index: 1;
     }
 
-    .header_img {
-        z-index: -1;
+    .header_img_view {
         width: 100%;
     }
 
@@ -64,7 +60,7 @@
     }
 
     .map_start_arrive {
-        margin-top: 14px;
+        margin-top: 20px;
         text-align: center;
     }
 
@@ -72,8 +68,7 @@
         border-radius: 100px;
         background-color: #fff;
         border: 1px solid #0068c3;
-        line-height: 30px;
-        width: 80px;
+        padding: 5px 20px;
         color: #0068c3;
     }
 
@@ -82,13 +77,12 @@
         background-color: #0068c3;
         border: 1px solid #0068c3;
         color: #fff;
-        line-height: 30px;
-        width: 80px;
         margin-left: 7px;
+        padding: 5px 20px;
     }
 
     .map_menu {
-        margin-top: 21px;
+        margin-top: 27px;
         border-top: 1px solid #f2f2f2;
         display: table;
         width: 100%;
@@ -109,6 +103,10 @@
 
     .map_menu li + .map_menu li button {
         margin-left: -1px;
+    }
+
+    .map_menu li + li .menu_box{
+        border-left: 1px solid #f2f2f2;
     }
 
     .menu_icon {
@@ -137,14 +135,18 @@
 
     .icon_font {
         margin-top: 8px;
-        font-size: 14p;
+        font-size: 14px;
         color: #424242;
     }
 
     .intro_box {
         margin-top: 8px;
         border-top: 8px solid #e1e5e7;
-        padding: 0 12px;
+    }
+
+    .map_tab_box {
+        border-bottom: 1px solid #f2f2f2;
+        padding: 0 8px;
     }
 
     .map_tab {
@@ -177,9 +179,14 @@
         color: #03c75a;
     }
 
+    .home {
+        padding: 0 8px;
+    }
+
     .home_box {
         padding: 12px;
         border-bottom: 1px solid #eee;
+        /* border-top: 1px solid #f2f2f2; */
     }
 
     .home_box:after {
@@ -231,12 +238,14 @@
         color: #424242;
     }
 
-    .map_tool {
-        display: table;
+    .map_tool::after {
+        clear: both;
+        content: '';
+        display: block;    
     }
 
     .map_tool li {
-        display: table-cell;
+        float: left;
         position: relative;
         padding-left: 10px;
     }
@@ -304,12 +313,14 @@
         color: #03c75a;
     }
 
-    .sns_list {
-        display: table;
+    .sns_list::after {
+        clear: both;
+        content: '';
+        display: block;       
     }
 
     .sns_list li {
-        display: table-cell;
+        float: left;
         position: relative;
     }
 
@@ -390,7 +401,7 @@
         background: url('htmlcss_advance_sprite.png') no-repeat;
         background-size: 140px 140px;
         height: 19px;
-        width: 102px;
+        width: 112px;
         background-position : -0px -98px;
     }
     .star_socre_minus {
@@ -398,8 +409,9 @@
         background: url('htmlcss_advance_sprite.png') no-repeat;
         background-size: 140px 140px;
         height: 19px;
-        width: 9px;
+        width: 10px;
         background-position : -10px -78px;
+        margin-left:-10px;
     } 
 
     .review_each{
@@ -423,10 +435,11 @@
     }
 
     .people_star{
-        position: relative;
+        overflow: hidden;
     }
 
     .review_score {
+        position: relative;
         padding-left: 15px;
         font-size: 15px;
     }
@@ -478,11 +491,13 @@
     }
 
     .review_more {
+        display: block;
         position: relative;
         width: 100%;
         border: 0px;
         background-color: #f3f7f8;
-        height: 50px;
+        line-height: 50px;
+        text-align: center;
     }
 
     .next_page {
@@ -499,4 +514,5 @@
         background-position : 0 -126px;
         position: absolute;
         margin-left: 5px;
+        top: 16px;
     }
