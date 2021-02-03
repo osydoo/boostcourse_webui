@@ -1,7 +1,5 @@
 @charset "UTF-8";
 
-@media screen and (max-width: 375px), screen and (max-height: 375px) and (orientation: landscape) {
-
     .blind {
         position: absolute;
         width: 1px;
@@ -33,8 +31,7 @@
 
     .header_img {
         z-index: -1;
-        max-width: 375px;
-        min-width: 320px;
+        width: 100%;
     }
 
     .overview_state {
@@ -503,4 +500,3 @@
         position: absolute;
         margin-left: 5px;
     }
-}
