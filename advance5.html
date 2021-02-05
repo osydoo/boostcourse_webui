@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="./advance5.css">
     <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./advance5.css">
     <title>
         네이버 맵
     </title>
@@ -29,60 +29,61 @@
             <ul class="map_menu">
                 <li>
                     <button type="button">
-                        <div class="menu_box">
-                            <div class="menu_icon phone"></div>
-                            <div class="icon_font">전화</div>
-                        </div>
+                        <span class="menu_box">
+                            <span class="menu_icon phone"></span>
+                            <span class="icon_font">전화</span>
+                        </span>
                     </button>
                 </li>
                 <li>
                     <button type="button">
-                        <div class="menu_box">
-                            <div class="menu_icon save"></div>
-                            <div class="icon_font">저장하기</div>
-                        </div>
+                        <span class="menu_box">
+                            <span class="menu_icon save"></span>
+                            <span class="icon_font">저장하기</span>
+                        </span>
                     </button>
                 </li>
                 <li>
                     <button type="button">
-                        <div class="menu_box">
-                            <div class="menu_icon navigation"></div>
-                            <div class="icon_font">네비게이션</div>
-                        </div>
+                        <span class="menu_box">
+                            <span class="menu_icon navigation"></span>
+                            <span class="icon_font">네비게이션</span>
+                        </span>
                     </button>
                 </li>
                 <li>
                     <button type="button">
-                        <div class="menu_box">
-                            <div class="menu_icon share"></div>
-                            <div class="icon_font">공유</div>
-                        </div>
+                        <span class="menu_box">
+                            <span class="menu_icon share"></span>
+                            <span class="icon_font">공유</span>
+                        </span>
                     </button>
                 </li>
             </ul>
         </section>
         <section class="intro_box">
             <div class="map_tab_box">
+                <h2 class="blind">이동 탭</h2>
                 <ul class="map_tab">
                     <li>
                         <!-- [D] 작동하고 있는 버튼의 h2에 active를 추가해줘야한다. -->
-                        <button type="button">
-                            <h2 class="active">홈</h2>
+                        <button type="button" class="active">
+                            홈
                         </button>
                     </li>
                     <li>
                         <button type="button">
-                            <h2>리뷰</h2>
+                            리뷰
                         </button>
                     </li>
                     <li>
                         <button type="button">
-                            <h2>사진</h2>
+                            사진
                         </button>
                     </li>
                     <li>
                         <button type="button">
-                            <h2>주변 가볼만한 곳</h2>
+                            주변 가볼만한 곳
                         </button>
                     </li>
                 </ul>
@@ -180,21 +181,30 @@
                 <p class="review_intro">네이버 예약을 통해 실제 방문한 이용자가 남긴 평가입니다.</p>
             </div>
             <div class="reivew_sum">
-                <strong class="review_score_total">4.5</strong><span class="review_standard_total">/5</span>
-                <span class="star_score_total"><span class="blind">별점 5점만점</span></span><span
-                    class="star_socre_minus"><span class="blind">마이너스0.5점</span></span>
+                <strong class="review_score_total"><span class="blind">별점</span>4.5</strong><span
+                    class="review_standard_total">/5</span>
+                <div class="star_score_box">
+                    <!-- [D]star_score_total 클라스인 span태그의 %를 10%단위로 넣어서 별점을 조절해주세요 -->
+                    <span class="star_socre_minus"></span><span style="width: 90%" class="star_score_total"></span>
+                </div>
             </div>
             <ul class="review_each">
                 <li>
-                    <img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20210202_223%2F1612267573993584dX_JPEG%2Fupload_5655327eed3c0e3e380e83b33c297d39.jpeg"
+                    <div class="img_bundle">
+                        <img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20210202_223%2F1612267573993584dX_JPEG%2Fupload_5655327eed3c0e3e380e83b33c297d39.jpeg"
                         width="100" height="100" alt="음식이미지" class="review_img">
+                        <!-- [D]이미지 장수에따라 표현해주시고 1장이라면 blind처리해주세요 -->
+                        <span class="img_num">3</span>
+                    </div>
                     <div class="people_star">
-                        <strong class="review_score">4.6<span class="blind">별점 4.6점</span></strong><span
+                        <strong class="review_score"><span class="blind">별점</span>4.6</strong><span
                             class="review_standard">/5<span class="blind">5점만점</span></span>
                         <p class="reivew_intro">음식도 좋았고, 시간을 뒤로 미뤘는데도 친절히 응해주셨습니다. 스테이크는
                             너무 뭐라뭐라</p>
-                        <span class="review_nickname">ade***</span><span class="reivew_day">2018.03.05
-                            방문</span>
+                        <div class="write_intfo">
+                            <span class="review_nickname">ade***</span><span class="reivew_day">2018.03.05
+                                방문</span>
+                        </div>
                     </div>
                 </li>
                 <li>
@@ -203,20 +213,27 @@
                             class="review_standard">/5<span class="blind">5점만점</span></span>
                         <p class="reivew_intro">음식도 좋았고, 시간을 뒤로 미뤘는데도 친절히 응해주셨습니다. 스테이크는
                             너무 뭐라뭐라</p>
-                        <span class="review_nickname">ade***</span><span class="reivew_day">2018.03.05
-                            방문</span>
+                        <div class="write_intfo">
+                            <span class="review_nickname">ade***</span><span class="reivew_day">2018.03.05
+                                방문</span>
+                        </div>
                     </div>
                 </li>
                 <li>
+                    <div class="img_bundle">
                     <img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20210202_223%2F1612267573993584dX_JPEG%2Fupload_5655327eed3c0e3e380e83b33c297d39.jpeg"
                         width="100" height="100" alt="음식이미지" class="review_img">
+                        <span class="img_num blind">1</span>
+                    </div>
                     <div class="people_star">
                         <strong class="review_score">4.6<span class="blind">별점 4.6점</span></strong><span
                             class="review_standard">/5<span class="blind">5점만점</span></span>
                         <p class="reivew_intro">음식도 좋았고, 시간을 뒤로 미뤘는데도 친절히 응해주셨습니다. 스테이크는
                             너무 뭐라뭐라</p>
-                        <span class="review_nickname">ade***</span><span class="reivew_day">2018.03.05
-                            방문</span>
+                        <div class="write_intfo">
+                            <span class="review_nickname">ade***</span><span class="reivew_day">2018.03.05
+                                방문</span>
+                        </div>
                     </div>
                 </li>
             </ul>

@@ -17,13 +17,13 @@
         position: absolute;
         top: 15px;
         left: 15px;
-        background: url('htmlcss_advance_sprite.png') no-repeat ;
+        background: url('htmlcss_advance_sprite.png') no-repeat;
         background-size: 140px 140px;
         border: 0;
-        height: 21px;
-        width: 18px;
+        height: 30px;
+        width: 30px;
         cursor: pointer;
-        background-position : 0 0;
+        background-position : 5px 5px;
     }
 
     .header_img_view {
@@ -65,6 +65,7 @@
     }
 
     .map_start {
+        display: inline-block;
         border-radius: 100px;
         background-color: #fff;
         border: 1px solid #0068c3;
@@ -73,6 +74,7 @@
     }
 
     .map_arrive {
+        display: inline-block;
         border-radius: 100px;
         background-color: #0068c3;
         border: 1px solid #0068c3;
@@ -94,7 +96,6 @@
     }
 
     .map_menu li button{
-        position: relative;
         background-color: #fff;
         width: 100%;
         padding: 15px 0 19px;
@@ -105,11 +106,16 @@
         margin-left: -1px;
     }
 
+    .menu_box {
+        display: block;
+    }
+
     .map_menu li + li .menu_box{
         border-left: 1px solid #f2f2f2;
     }
 
     .menu_icon {
+        display: block;
         background: url('htmlcss_advance_sprite.png') no-repeat ;
         background-size: 140px 140px;
         height: 20px;
@@ -134,6 +140,7 @@
     }
 
     .icon_font {
+        display: block;
         margin-top: 8px;
         font-size: 14px;
         color: #424242;
@@ -147,6 +154,7 @@
     .map_tab_box {
         border-bottom: 1px solid #f2f2f2;
         padding: 0 8px;
+        height: 46px;
     }
 
     .map_tab {
@@ -162,10 +170,7 @@
         background-color: #fff;
         border: 0;
         padding: 0 12px;
-        line-height: 46px;
-    }
-
-    .map_tab li button h2{
+        line-height: 44px;
         font-size: 16px;
         color: #242424;
     }
@@ -174,7 +179,7 @@
         margin-left: -1px;
     }
 
-    .map_tab li button h2.active {
+    .map_tab li button.active {
         border-bottom: 2px solid #03c75a;
         color: #03c75a;
     }
@@ -396,22 +401,34 @@
         color: #8f8f8f;
     }
 
+    .star_score_box {
+        display: inline-block;
+        width: 113px;
+        height: 19px;
+        position: relative;
+    }
+
     .star_score_total {
         display:inline-block;
         background: url('htmlcss_advance_sprite.png') no-repeat;
         background-size: 140px 140px;
         height: 19px;
-        width: 112px;
         background-position : -0px -98px;
+        position: absolute;
+        top: 0;
+        left: 0;
     }
+
     .star_socre_minus {
         display:inline-block;
         background: url('htmlcss_advance_sprite.png') no-repeat;
         background-size: 140px 140px;
         height: 19px;
-        width: 10px;
-        background-position : -10px -78px;
-        margin-left:-10px;
+        width: 100%;
+        background-position : -0px -78px;
+        position: absolute;
+        top: 0;
+        left: 0;
     } 
 
     .review_each{
@@ -434,6 +451,7 @@
         border-top: 1px solid #f2f2f2;
     }
 
+     
     .people_star{
         overflow: hidden;
     }
@@ -472,28 +490,47 @@
         -webkit-box-orient: vertical;
     }
 
-    .review_img {
+    .img_bundle{
         float: right;
+        position: relative;
         margin: 2px 0 2px 16px;
+    }
+
+    .review_img {
+    }
+
+    .img_num {
+        line-height: 25px;
+        width: 25px;
+        background-color:rgba(0, 0, 0, 0.5);
+        text-align: center;
+        color: #fff;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    .write_intfo {
+        margin-top: 6px;
     }
 
     .review_nickname {
         font-size: 14px;
-        margin-top: 6px;
+        color: #666;
     }
 
 
     .reivew_day{
         font-size: 14px;
-        margin: 6px 0 0 10px;
+        margin-left: 10px;
         border-left: 2px solid #f2f2f2;
-        padding-left: 10px
+        padding-left: 10px;
+        color: #8f8f8f;
     }
 
     .review_more {
         display: block;
         position: relative;
-        width: 100%;
         border: 0px;
         background-color: #f3f7f8;
         line-height: 50px;
