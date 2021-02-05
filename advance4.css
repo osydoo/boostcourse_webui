@@ -184,7 +184,6 @@ img {
 
 .custom_select select:focus {
     border: 1px solid #ddd;
-
 }
 
 .custom_select ul{
@@ -196,8 +195,9 @@ img {
     width: 194px;
     position: absolute;
     top: 38px;
-    left: 0;
-    border: 2px solid #838586;
+    left: 1px;
+    border: 1px solid #838586;
+    z-index: 10;
 }
 
 .custom_select ul li button{
@@ -221,16 +221,21 @@ img {
     margin-left: 0px;
 }
 
-.custom_select.small > select{
+.custom_select.small select{
     width: 120px;
 }
 
 .custom_select.small ul{
-    width: 108px;
+    width: 118px;
 }
 
 .custom_select.small ul li{
-    width: 108px;
+    width: 118px;
+}
+
+.custom_select.small select:focus + ul{
+    width: 118px;
+
 }
 
 .period_layout_box {
@@ -298,6 +303,7 @@ img {
     vertical-align: top;
     border: 1px solid #eee;
     background-color: #fff;
+    margin-left: -1px;
 }
 
 .line_wave {
