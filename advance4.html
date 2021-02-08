@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./advance4.css">
+    <title>
+        폼요소 커스텀하기
+    </title>
+</head>
+
+<body>
+    <div class="wrap">
+        <form>
+            <div class="form">
+                <div class="list_seller">
+                    <div class="list_head">
+                        검색어
+                    </div>
+                    <div class="list_content">
+                        <div class="product_code_switch">
+                            <div class="product_code_block">
+                                <input checked type="radio" name="product_code_check" id="origin_code"
+                                    class="default_check">
+                                <label for="origin_code">원상품번호</label>
+                            </div>
+                            <div class="product_code_block">
+                                <input type="radio" name="product_code_check" id="seller_code" class="default_check">
+                                <label for="seller_code">판매자상품코드</label>
+                            </div>
+                        </div>
+                        <label for="multi_search" class="blind">복수 검색 입력</label>
+                        <textarea cols="5" rows="3" placeholder="복수 검색 &#10;(enter 또는 &#34;.&#34;로 구분)"
+                            id="multi_search" class="find_code"></textarea>
+                        <div class="product_code">
+                            <div class="product_code_block">
+                                <label for="product_name" class="product_name_label">상품명</label>
+                                <input type="text" id="product_name" class="product_name_text">
+                            </div>
+                            <div class="product_code_block">
+                                <label for="model_name" class="product_name_label">모델명</label>
+                                <input type="text" id="model_name" class="product_name_text">
+                            </div>
+                        </div>
+                        <div class="product_code">
+                            <div class="product_code_block">
+                                <label for="makername" class="product_name_label">제조사명</label>
+                                <input type="text" id="makername" class="product_name_text">
+                            </div>
+                            <div class="product_code_block">
+                                <label for="brand_name" class="product_name_label">브랜드명</label>
+                                <input type="text" id="brand_name" class="product_name_text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="list_seller">
+                    <div class="list_head">
+                        판매상태
+                    </div>
+                    <div class="list_content">
+                        <div class="sell_state_box">
+                            <input type="checkbox" id="sell_all" class="default_check">
+                            <label for="sell_all">전체</label>
+                        </div>
+                        <div class="sell_state_box">
+                            <input type="checkbox" id="sell_wait" class="default_check">
+                            <label for="sell_wait">판매대기</label>
+                        </div>
+                        <div class="sell_state_box">
+                            <input type="checkbox" id="sell_doing" class="default_check">
+                            <label for="sell_doing">판매중</label>
+                        </div>
+                        <div class="sell_state_box">
+                            <input type="checkbox" id="sell_out" class="default_check">
+                            <label for="sell_out">품절</label>
+                        </div>
+                        <div class="sell_state_box">
+                            <input type="checkbox" id="approve_wait" class="default_check">
+                            <label for="approve_wait">승인대기</label>
+                        </div>
+                        <div class="sell_state_box">
+                            <input type="checkbox" id="sell_stop" class="default_check">
+                            <label for="sell_stop">판매중지</label>
+                        </div>
+                        <div class="sell_state_box">
+                            <input type="checkbox" id="sell_fin" class="default_check">
+                            <label for="sell_fin">판매종료</label>
+                        </div>
+                        <div class="sell_state_box">
+                            <input type="checkbox" id="sell_deny" class="default_check">
+                            <label for="sell_deny">판매금지</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="list_seller">
+                    <div class="list_head">
+                        카테고리
+                    </div>
+                    <!-- [D] 셀렉트 요소 클릭시 .custom_select 요소에 custom_select_focus 클래스 추가해주세요-->
+                    <!-- [D] 선택했을때 li리스트를 클릭했을때 form리스트 select classification에 데이터 값이 들어가야합니다.-->
+                    <div class="list_content">
+                        <div class="custom_select">
+                            <select name="classification">
+                                <option selected>대분류</option>
+                            </select>
+                            <ul>
+                                <li><button type="button">대분류</button></li>
+                                <li><button type="button">대분류</button></li>
+                                <li><button type="button">대분류</button></li>
+                            </ul>
+                        </div>
+                        <div class="custom_select">
+                            <select>
+                                <option selected>중분류</option>
+                            </select>
+                            <ul>
+                                <li><button type="button">중분류</button></li>
+                                <li><button type="button">중분류</button></li>
+                                <li><button type="button">중분류</button></li>
+                            </ul>
+                        </div>
+                        <div class="custom_select">
+                            <select>
+                                <option selected>소분류</option>
+                            </select>
+                            <ul>
+                                <li><button type="button">소분류</button></li>
+                                <li><button type="button">소분류</button></li>
+                                <li><button type="button">소분류</button></li>
+                            </ul>
+                        </div>
+                        <div class="custom_select">
+                            <select>
+                                <option selected>세분류</option>
+                            </select>
+                            <ul>
+                                <li><button type="button">세분류</button></li>
+                                <li><button type="button">세분류</button></li>
+                                <li><button type="button">세분류</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="list_seller">
+                    <div class="list_head">
+                        채널
+                    </div>
+                    <div class="list_content">
+                        <div class="sell_state_box">
+                            <input type="checkbox" id="channel_all" class="default_check">
+                            <label for="channel_all">전체</label>
+                        </div>
+                        <div class="sell_state_box">
+                            <input type="checkbox" id="channel_storefarm" class="default_check">
+                            <label for="channel_storefarm">스토어팜</label>
+                        </div>
+                        <div class="sell_state_box">
+                            <input type="checkbox" id="channel_winbdow" class="default_check">
+                            <label for="channel_winbdow">윈도</label>
+                        </div>
+                        <div class="sell_state_box">
+                            <input type="checkbox" id="channel_band" class="default_check">
+                            <label for="channel_band">밴드기프트샵</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="list_seller">
+                    <div class="list_head">
+                        결제여부
+                    </div>
+                    <div class="list_content">
+                        <div class="sell_state_box">
+                            <input name="pay" type="radio" id="pay_all" checked class="default_check">
+                            <label for="pay_all">전체</label>
+                        </div>
+                        <div class="sell_state_box">
+                            <input name="pay" type="radio" id="pay_pay" class="default_check">
+                            <label for="pay_pay">결제상품(pay)</label>
+                        </div>
+                        <div class="sell_state_box">
+                            <input name="pay" type="radio" id="pay_nonpay" class="default_check">
+                            <label for="pay_nonpay">무결제상품(Non-pay)</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="list_seller">
+                    <div class="list_head">
+                        기간
+                    </div>
+                    <div class="list_content">
+                        <!-- [D] 선택했을때 li리스트를 클릭했을때 이미지를  .custom_select_focus::after 로 변경해줘야합니다.-->
+                        <!-- [D] 선택했을때 li리스트를 클릭했을때 form리스트 select classification에 데이터 값이 들어가야합니다.-->
+                        <div class="custom_select small">
+                            <select name="classification">
+                                <option selected>상품등록일</option>
+                            </select>
+                            <ul>
+                                <li><button type="button">상품등록일</button></li>
+                                <li><button type="button">판매시작일</button></li>
+                                <li><button type="button">판매종료일</button></li>
+                                <li><button type="button">최종수정일</button></li>
+                            </ul>
+                        </div>
+                        <div class="period_layout_box">
+                            <div class="period_box">
+                                <input type="radio" name="period_check" id="period_today" class="button_check" checked>
+                                <label for="period_today">오늘</label>
+                                <input type="radio" name="period_check" id="period_weekend" class="button_check">
+                                <label for="period_weekend">1주일</label>
+                                <input type="radio" name="period_check" id="period_month" class="button_check">
+                                <label for="period_month">1개월</label>
+                                <input type="radio" name="period_check" id="period_three_month" class="button_check">
+                                <label for="period_three_month">3개월</label>
+                                <input type="radio" name="period_check" id="period_siz_month" class="button_check">
+                                <label for="period_siz_month">6개월</label>
+                                <input type="radio" name="period_check" id="period_year" class="button_check">
+                                <label for="period_year">1년</label>
+                            </div>
+                        </div>
+                        <div class="calender_box">
+                            <label for="calender_start" class="blind">시작일</label><input type="text" id="calender_start" class="calender_select"><button type="button" class="calender_select_day"><span class="blind">시작달력</span></button>
+                        </div>
+                        <span class="line_wave">~</span>
+                        <div class="calender_box">
+                            <label for="calender_fin" class="blind">종료일</label><input type="text" id="calender_fin" class="calender_select"><button class="calender_select_day"><span class="blind">종료달력</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="submit_box">
+                <button type="reset" class="reset_button">초기화</button>
+                <button type="submit" class="submit_button">검색</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
